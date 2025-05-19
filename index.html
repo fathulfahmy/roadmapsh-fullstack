@@ -1,0 +1,197 @@
+<!-- https://www.youtube.com/watch?v=pQN-pnXPaVg -->
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <!-- Meta tags -->
+    <meta charset="utf-8" />
+    <meta name="description" content="This is an awesome website" />
+    <meta name="author" content="Fathul" />
+    <meta name="keywords" content="HTML, Webdev, FreeCodeCamp" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fathul's Website</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      h2 {
+        background-color: white;
+      }
+      p {
+        font-size: 18px;
+        font-family: "Inter", monospace;
+      }
+
+      a {
+        color: green;
+      }
+
+      #user_name {
+        color: orange;
+      }
+
+      .blue-text {
+        color: blue;
+        color: #0000ff;
+        color: #00f;
+        color: rgb(0, 0, 255);
+      }
+
+      .thick-green-border {
+        border-color: green;
+        border-width: 10px;
+        border-style: solid;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body style="background-color: lightblue">
+    <header>
+      <!-- Heading -->
+      <h1 style="color: red">Fathul's Website</h1>
+      <h2 class="blue-text">Fathul's Website</h2>
+      <h3>Fathul's Website</h3>
+      <h4>Fathul's Website</h4>
+      <h5>Fathul's Website</h5>
+      <h6>Fathul's Website</h6>
+      <br />
+      <hr />
+      <nav></nav>
+    </header>
+
+    <main>
+      <p><big>This</big> <big>is</big> <small>my</small> paragraph</p>
+      <p>H<sub>2</sub>O</p>
+      <p>10<sup>2</sup></p>
+      <!-- Comment -->
+      <!-- <h2>Comments are <i>invisible</i></h2> -->
+      <article>
+        <section>
+          <!-- content -->
+        </section>
+        <section>
+          <!-- content -->
+        </section>
+        <section>
+          <aside>
+            <!-- advertisement -->
+          </aside>
+        </section>
+      </article>
+
+      <!-- Link -->
+      <a href="https://www.google.com" target="_blank">Google's homepage</a>
+      <a href="./page2.html">Page 2</a>
+      <a href="./pages/page3.html">Page 3</a>
+      <a href="./images/cat.jpg">Cat</a>
+
+      <!-- Image -->
+      <img src="https://picsum.photos/seed/200/300?grayscale" alt="Avatar" class="thick-green-border" />
+
+      <!-- Clickable image -->
+      <!-- <a href="https://www.google.com">
+        <img src="./images/cat.jpg" alt="Cat" width="300" height="200" />
+      </a> -->
+
+      <!-- Video -->
+      <!-- <video src="./video.mp4" controls autoplay loop width="300" height="200" poster="./thumbnail.jpg"></video> -->
+
+      <!-- Youtube video -->
+      <!-- <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/pQN-pnXPaVg?si=s6Zhk_qli9yKwu7O"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe> -->
+
+      <!-- List -->
+      <ol type="i">
+        <li><a href="#">Cut Apples</a></li>
+        <li>Peel Oranges</li>
+        <li>Smash Bananas</li>
+        <li>Blend Pineapple</li>
+      </ol>
+
+      <ul>
+        <li><a href="#">Apples</a></li>
+        <li>Oranges</li>
+        <li>Bananas</li>
+        <li>Pineapple</li>
+      </ul>
+
+      <dl>
+        <dt>Apples</dt>
+        <dd>Is a fruit red or green in color</dd>
+        <dt>Bananas</dt>
+        <dd>Is a fruit yellow in color</dd>
+      </dl>
+
+      <!-- Table -->
+      <table>
+        <caption>
+          <h2>List of numbers</h2>
+        </caption>
+
+        <thead>
+          <tr>
+            <th colspan="2">one</th>
+            <th>two</th>
+            <th>three</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>four</td>
+            <td>five</td>
+            <td>six</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Inline elements -->
+      <span>span1</span>
+      <span>span2</span>
+
+      <!-- Block elements -->
+      <div>div1</div>
+      <div>div2</div>
+
+      <!-- Input -->
+      <form id="my_form" action="" method="post">
+        <input type="text" name="user_name" id="user_name" value="John Doe" />
+        <input type="password" name="user_password" id="user_password" value="johndoe123" />
+        <textarea name="user_bio" id="user_bio">I'm john</textarea>
+        <input type="date" />
+        <input type="file" />
+        <input type="checkbox" name="user_settings" id="user_settings_one" />
+        <input type="checkbox" name="user_settings" id="user_settings_two" />
+        <input type="radio" name="user_gender" id="user_gender_male" />
+        <input type="radio" name="user_gender" id="user_gender_female" />
+        <input id="submit_button" type="submit" />
+      </form>
+
+      <button id="random_button">Random</button>
+      <!-- Embed website -->
+      <!-- <iframe src="https://www.google.com" frameborder="0" width="300" height="200"
+        >Unable to view iframe on this web browser or X-Frame-Options set to sameorigin</iframe
+      > -->
+    </main>
+
+    <footer>
+      <h2 style="color: green">Style and Colors</h2>
+      <p style="color: red; background-color: blue">You can style your HTML and make it look pretty</p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
