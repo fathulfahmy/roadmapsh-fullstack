@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+  </head>
+  <body>
+    <a href="index.html">Go to HTML</a>
+    <a href="javascript.html">Go to JavaScript</a>
+
+    <form action="/signup" method="POST">
+      <h3>Login Form</h3>
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" class="form-input" />
+      <button type="submit" class="submit-btn">Submit</button>
+      <small class="form-alert"></small>
+    </form>
+    <div class="result">Result:</div>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+      const result = document.querySelector(".result");
+      const fetchUsers = async () => {
+        try {
+          const { data } = await axios.get("/api/users");
+          const users = data.map((user) => {
+            return `<span>${user.name}</span>`;
+          });
+          result.innerHTML = users.join("");
+        } catch (error) {
+          result.textContent = error;
+          console.log(error);
+        }
+      };
+      fetchUsers();
+
+      const btn = document.querySelector(".submit-btn");
+      const input = document.querySelector(".form-input");
+      const formAlert = document.querySelector(".form-alert");
+      btn.addEventListener("click", async (e) => {
+        e.preventDefault();
+        const nameValue = input.value;
+
+        try {
+          const { data } = await axios.post("/api/user", { name: nameValue });
+          const span = document.createElement("span");
+          span.textContent = data.user;
+          result.appendChild(span);
+        } catch (error) {
+          formAlert.textContent = error;
+          console.log(error);
+        }
+      });
+    </script>
+  </body>
+</html>
