@@ -1,3 +1,5 @@
+// https://www.youtube.com/watch?v=Oe421EPjeBE
+
 const amount = 9;
 
 if (amount < 10) {

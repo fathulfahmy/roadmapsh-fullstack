@@ -1,0 +1,29 @@
+h2 {
+  background-color: white;
+}
+p {
+  font-size: 18px;
+  font-family: "Inter", monospace;
+}
+
+a {
+  color: green;
+}
+
+#user_name {
+  color: orange;
+}
+
+.blue-text {
+  color: blue;
+  color: #0000ff;
+  color: #00f;
+  color: rgb(0, 0, 255);
+}
+
+.thick-green-border {
+  border-color: green;
+  border-width: 10px;
+  border-style: solid;
+  border-radius: 10px;
+}
