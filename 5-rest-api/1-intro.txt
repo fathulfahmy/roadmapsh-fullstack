@@ -1,0 +1,41 @@
+https://www.youtube.com/watch?v=Q-BpqyOT3a8
+
+Application Program Interface
+
+Contract provided by a software for another software
+
+1. Client send request
+2. API receive request from client and send to the server
+3. Server process requests and send response
+4. API receive response from server and send to the client
+
+REpresentational State Transfer
+
+1. Architecture for networked Application
+2. Relies on stateless client-server protocol, (HTTP)
+3. Treats server objects as resources, can be created or destroyed
+
+HTTP Methods
+GET - retrieve data from resource
+POST - submit data to be processed by resource
+PUT - update resource
+DELETE - delete resource
+HEAD - retrieve metadata of resource
+OPTIONS - return supported HTTP methods
+PATCH - update partial resource
+
+GET https://website.com/api/users
+GET https://website.com/api/users/1
+POST https://website.com/api/users
+PUT https://website.com/api/users/1
+DELETE https://website.com/api/users/1
+
+Authorization
+1. Header
+   Authorization: token xxxx
+
+2. Param
+https://website.com/?access_token=xxxx
+
+3. Secret
+https://website.com/?client_id=xxxx&client_secret=xxxx
