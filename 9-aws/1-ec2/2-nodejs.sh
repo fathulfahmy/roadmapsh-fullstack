@@ -1,3 +1,5 @@
+# https://www.youtube.com/watch?v=oHAQ3TzUTro
+
 # open AWS Console
 
 # go to EC2
