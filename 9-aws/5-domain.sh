@@ -37,7 +37,7 @@ server {
         listen       443 ssl;
         listen       [::]:443 ssl;
         http2        on;
-        server_name  fathulfahmy.com www.fathulfahmy.com;
+        server_name  yourdomain.com www.yourdomain.com;
 
         ssl_certificate /etc/ssl/cloudflare/origin.pem;
         ssl_certificate_key /etc/ssl/cloudflare/origin.key;

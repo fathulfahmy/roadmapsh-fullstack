@@ -40,9 +40,9 @@ node server.js
 # create a new environment file
 vim app.env
 
-MYSQL_HOST="13.229.103.103"
+MYSQL_HOST="12.345.678.901"
 MYSQL_USER="remoteuser"
-MYSQL_PASSWORD="Aqm2015!"
+MYSQL_PASSWORD="your-password"
 MYSQL_DATABASE="lotr"
 
 # create a new service file
