@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AWS SES</title>
+  </head>
+  <body>
+    <form id="contactForm" enctype="multipart/form-data">
+      <div>
+        <p>Name</p>
+        <input type="text" name="name" id="name" />
+      </div>
+      <div>
+        <p>Email</p>
+        <input type="email" name="email" id="email" />
+      </div>
+      <div>
+        <p>Message</p>
+        <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter your message"></textarea>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+    <p id="contactStatus"></p>
+  </body>
+
+  <script>
+    const contactForm = document.getElementById("contactForm");
+    const contactStatus = document.getElementById("contactStatus");
+
+    contactForm.addEventListener("submit", async function (e) {
+      e.preventDefault();
+      contactStatus.textContent = "Sending...";
+
+      const formData = new FormData(contactForm);
+      const payload = Object.fromEntries(formData.entries());
+
+      const response = await fetch("/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const result = await response.text();
+      contactStatus.textContent = result;
+    });
+  </script>
+</html>
